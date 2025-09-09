@@ -46,7 +46,22 @@ count_loop:
 print_result:
     PRINTF32 `Number of trailing zeros: %d\n\x0`, ecx
 
-    ; TODO: b) Perform ROT13 on the string "vec"
+    ; b) Perform ROT13 on the string "vec"
+	mov ecx, 0
+loop:
+	mov al, [zeros + ecx]
+	add al, 13
+	cmp al, 'z'
+	jle skip
+	sub al, 26
+skip:
+	mov [zeros + ecx], al
+	
+	inc ecx
+	cmp ecx, len_vec
+	jne loop
+	
+	PRINTF32 
 
     ; TODO: c) Print the size of the "endianess" structure (bits and bytes)
 
