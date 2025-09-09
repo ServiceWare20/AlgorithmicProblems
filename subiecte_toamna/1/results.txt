@@ -1,0 +1,4 @@
+a) The number 1701668212 is positive
+b) The number 0x65747962a656d is even
+c) Number of set bits: 27
+d) Address of first main instruction: 0x5e4611a0 (sau altă adresă)

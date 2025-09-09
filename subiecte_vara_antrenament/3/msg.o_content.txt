@@ -1,0 +1,10 @@
+#include "out.h"
+
+
+
+void print_message(void)
+
+{
+  puts("Hello from msg.o!");
+  return;
+}
